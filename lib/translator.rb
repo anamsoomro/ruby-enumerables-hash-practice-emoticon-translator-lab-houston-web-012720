@@ -21,7 +21,7 @@ def get_japanese_emoticon(path, english_emoticon)
   if japanese_emoticon
     japanese_emoticon
   else
-    "Sorry, this emoticon is not in our dictionary."
+    "Sorry, that emoticon was not found"
   end
 end
 
