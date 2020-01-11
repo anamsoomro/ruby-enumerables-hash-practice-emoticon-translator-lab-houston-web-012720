@@ -16,7 +16,7 @@ def load_library (path)
 end
 
 def get_japanese_emoticon(path, english_emoticon)
-  load_library(path)
+  lookup = load_library(path)
   japanese_emoticon = lookup[:get_emoticon][english_emoticon]
   if japanese_emoticon
     japanese_emoticon
