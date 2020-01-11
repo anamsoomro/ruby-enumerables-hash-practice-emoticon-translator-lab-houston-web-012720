@@ -17,6 +17,12 @@ end
 
 def get_japanese_emoticon(path, english_emoticon)
   load_library(path)
+  japanese_emoticon = lookup[:get_emoticon][english_emoticon]
+  if japanese_emoticon
+    japanese_emoticon
+  else
+    "Sorry, this emoticon is not in our dictionary."
+  end
 end
 
 def get_english_meaning
