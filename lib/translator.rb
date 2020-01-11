@@ -2,21 +2,22 @@ require "yaml"
 
 def load_library (path)
   dictionary = YAML.load_file(path)
-  result = {
+  lookup = {
   :get_meaning => {},
   #keys inside get_meaning are japanese emoticons that point to their meanings
   :get_emoticon => {}
   #keys inside :get_emoticon are english emoticons pointing to their japenese equivalents
   }
   dictionary.each do |meaning, emoticons|
-    result[:get_meaning][emoticons[1]] = meaning
-    result[:get_emoticon][emoticons[0]] = emoticons[1]
+    lookup[:get_meaning][emoticons[1]] = meaning
+    lookup[:get_emoticon][emoticons[0]] = emoticons[1]
   end
-  result
+  lookup
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(path, english_emoticon)
+  load_library(path)
+  japanese_emoticon = 
 end
 
 def get_english_meaning
